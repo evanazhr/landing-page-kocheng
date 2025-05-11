@@ -1,1 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-worksans: 'Work Sans', sans-serif;
+  --font-opensans: 'Open Sans', sans-serif;
+  --brand-primary: #bcd7d2;
+  --text-primary: #293231;
+  --text-secondary: #092a24;
+}
+
+@layer base {
+  * {
+    font-family: var(--font-opensans);
+  }
+}
