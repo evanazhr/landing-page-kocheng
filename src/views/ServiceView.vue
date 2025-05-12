@@ -12,7 +12,10 @@ import cat6 from '@/assets/img/cat-6.jpg'
     <section class="w-full pt-20">
       <div class="justify-center items-start flex flex-col p-4 container mx-auto">
         <!-- Judul dan Deskripsi Layanan -->
-        <div class="flex flex-col gap-4 mb-6">
+        <div
+          v-scroll-reveal="{ animationClass: 'animate-fade-in-up', threshold: 0.2 }"
+          class="flex flex-col gap-4 mb-6"
+        >
           <h2 class="text-4xl font-bold">Layanan Kucing Super Gaul Kami</h2>
           <p class="text-lg">
             Tidak hanya manusia yang butuh layanan, kucing juga butuh layanan! Kami menawarkan
@@ -22,7 +25,10 @@ import cat6 from '@/assets/img/cat-6.jpg'
         </div>
 
         <!-- Layanan -->
-        <div class="grid my-6 grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div
+          v-scroll-reveal="{ animationClass: 'animate-fade-in-up', threshold: 0.2 }"
+          class="grid my-6 grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
+        >
           <!-- Layanan 1 -->
           <div
             class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg text-center shadow-lg transition-transform hover:scale-105"
@@ -38,6 +44,7 @@ import cat6 from '@/assets/img/cat-6.jpg'
 
           <!-- Layanan 2 -->
           <div
+            v-scroll-reveal="{ animationClass: 'animate-fade-in-up', threshold: 0.2 }"
             class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg text-center shadow-lg transition-transform hover:scale-105"
           >
             <img
@@ -54,6 +61,7 @@ import cat6 from '@/assets/img/cat-6.jpg'
 
           <!-- Layanan 3 -->
           <div
+            v-scroll-reveal="{ animationClass: 'animate-fade-in-up', threshold: 0.2 }"
             class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg text-center shadow-lg transition-transform hover:scale-105"
           >
             <img
@@ -70,6 +78,7 @@ import cat6 from '@/assets/img/cat-6.jpg'
 
           <!-- Layanan 4 -->
           <div
+            v-scroll-reveal="{ animationClass: 'animate-fade-in-up', threshold: 0.2 }"
             class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg text-center shadow-lg transition-transform hover:scale-105"
           >
             <img
@@ -87,6 +96,7 @@ import cat6 from '@/assets/img/cat-6.jpg'
 
           <!-- Layanan 5 -->
           <div
+            v-scroll-reveal="{ animationClass: 'animate-fade-in-up', threshold: 0.2 }"
             class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg text-center shadow-lg transition-transform hover:scale-105"
           >
             <img
@@ -104,6 +114,7 @@ import cat6 from '@/assets/img/cat-6.jpg'
 
           <!-- Layanan 6 -->
           <div
+            v-scroll-reveal="{ animationClass: 'animate-fade-in-up', threshold: 0.2 }"
             class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg text-center shadow-lg transition-transform hover:scale-105"
           >
             <img
@@ -123,7 +134,10 @@ import cat6 from '@/assets/img/cat-6.jpg'
     </section>
 
     <!-- Contact Section -->
-    <section class="bg-gray-800 dark:bg-gray-900 text-center text-white py-8">
+    <section
+      class="bg-gray-800 dark:bg-gray-900 text-center text-white py-8"
+      v-scroll-reveal="{ animationClass: 'animate-fade-in-up', threshold: 0.2 }"
+    >
       <div class="container mx-auto">
         <h2 class="text-3xl font-bold mb-4">Hubungi Kami Untuk Layanan Lainnya!</h2>
         <p class="text-lg mb-6">

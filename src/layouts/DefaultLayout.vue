@@ -4,13 +4,15 @@ import Footer from '@/components/Footer.vue'
 </script>
 
 <template>
-  <header class="fixed w-full z-50 top-4 left-1/2 -translate-x-1/2 px-4">
-    <Navbar />
-  </header>
-  <main class="dark:bg-gray-900">
-    <router-view />
-  </main>
-  <footer>
-    <Footer />
-  </footer>
+  <div class="dark:bg-gray-900">
+    <header class="fixed w-full z-50 top-4 left-1/2 -translate-x-1/2 px-4">
+      <Navbar />
+    </header>
+    <main>
+      <router-view />
+    </main>
+    <footer class="dark:bg-gray-900">
+      <Footer />
+    </footer>
+  </div>
 </template>

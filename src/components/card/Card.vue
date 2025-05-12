@@ -3,7 +3,7 @@
     <div class="size-56 overflow-hidden rounded-2xl">
       <img
         :src="img"
-        class="size-full rounded-2xl hover:scale-105 duration-300 cursor-pointer object-cover bg-left"
+        class="size-full rounded-2xl active:scale-105 hover:scale-105 duration-300 cursor-pointer object-cover bg-left"
         :alt="img"
       />
     </div>

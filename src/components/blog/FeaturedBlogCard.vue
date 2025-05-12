@@ -23,12 +23,12 @@ const props = defineProps({
 
 <template>
   <div
-    class="h-full flex hover:bg-black/5 dark:hover:bg-white/5 cursor-pointer flex-col gap-4 p-4 border border-blue-100 rounded-3xl shadow-md"
+    class="h-full flex hover:bg-black/5 active:bg-white/5 dark:hover:bg-white/5 dark:active:bg-white/5 cursor-pointer flex-col gap-4 p-4 border border-blue-100 rounded-3xl shadow-md"
   >
     <div class="size-full overflow-hidden rounded-2xl">
       <img
         :src="img"
-        class="size-full object-cover hover:scale-105 duration-300 bg-left"
+        class="size-full object-cover active:scale-105 hover:scale-105 duration-300 bg-left"
         :alt="img"
       />
     </div>

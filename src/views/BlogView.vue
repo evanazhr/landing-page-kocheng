@@ -15,13 +15,19 @@ import BlogCard from '@/components/blog/BlogCard.vue'
     <section class="w-full pt-20">
       <div class="justify-center items-start flex flex-col p-4 container mx-auto">
         <!-- Header Blog -->
-        <div class="flex justify-between items-center w-full mb-6">
+        <div
+          class="flex justify-between items-center w-full mb-6"
+          v-scroll-reveal="{ animationClass: 'animate-fade-in-up', threshold: 0.2 }"
+        >
           <h2 class="text-4xl font-bold">Cerita Kucing Terbaru (Yang Bikin Guling-Guling)</h2>
           <BtnOutline />
         </div>
 
         <!-- Kategori Blog -->
-        <div class="mb-10">
+        <div
+          class="mb-10"
+          v-scroll-reveal="{ animationClass: 'animate-fade-in-up', threshold: 0.2 }"
+        >
           <h3 class="text-2xl font-semibold mb-4">Kategori Kucing Pilihan:</h3>
           <div class="flex flex-wrap gap-4">
             <span
@@ -48,7 +54,10 @@ import BlogCard from '@/components/blog/BlogCard.vue'
         </div>
 
         <!-- Artikel Terbaru -->
-        <div class="grid my-6 grid-cols-1 md:grid-cols-2 gap-4 w-full">
+        <div
+          v-scroll-reveal="{ animationClass: 'animate-fade-in-up', threshold: 0.2 }"
+          class="grid my-6 grid-cols-1 md:grid-cols-2 gap-4 w-full"
+        >
           <div>
             <FeaturedBlogCard
               :img="cat6"
@@ -80,7 +89,10 @@ import BlogCard from '@/components/blog/BlogCard.vue'
         </div>
 
         <!-- Widget Populer -->
-        <div class="mt-10">
+        <div
+          class="mt-10"
+          v-scroll-reveal="{ animationClass: 'animate-fade-in-up', threshold: 0.2 }"
+        >
           <h3 class="text-3xl font-bold mb-6">Widget Kucing Populer</h3>
           <div class="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div class="w-full bg-gray-100 dark:bg-gray-800 rounded-xl p-6 text-center">

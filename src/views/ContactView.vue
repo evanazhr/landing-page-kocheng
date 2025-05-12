@@ -1,6 +1,9 @@
 <template>
   <div class="min-h-dvh dark:text-white bg-white dark:bg-gray-900">
-    <section class="py-24 container mx-auto p-4">
+    <section
+      v-scroll-reveal="{ animationClass: 'animate-fade-in-up', threshold: 0.2 }"
+      class="py-24 container mx-auto p-4"
+    >
       <h1 class="text-5xl font-bold mb-6 text-center">Hubungi Kami (kalau berani)</h1>
       <p class="text-center max-w-2xl mx-auto mb-10">
         Ada pertanyaan, kritik, saran, atau cuma mau ngasih foto kucing rebahan 12 jam? Kirim aja!
@@ -9,7 +12,10 @@
       </p>
 
       <!-- Form Kontak -->
-      <div class="grid md:grid-cols-2 gap-8">
+      <div
+        v-scroll-reveal="{ animationClass: 'animate-fade-in-up', threshold: 0.2 }"
+        class="grid md:grid-cols-2 gap-8"
+      >
         <form class="bg-gray-100 dark:bg-gray-800 p-6 rounded-2xl shadow-md space-y-4">
           <div>
             <label class="block mb-1 font-semibold">Nama Kamu</label>
@@ -44,7 +50,10 @@
         </form>
 
         <!-- Info Kontak -->
-        <div class="flex flex-col justify-center gap-6">
+        <div
+          v-scroll-reveal="{ animationClass: 'animate-fade-in-up', threshold: 0.2 }"
+          class="flex flex-col justify-center gap-6"
+        >
           <div>
             <h2 class="text-xl font-bold mb-2">Markas Besar KochengVerse</h2>
             <p>Di balik lemari, sebelah bantal empuk 🛋️</p>

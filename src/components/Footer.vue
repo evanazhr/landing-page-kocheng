@@ -4,7 +4,10 @@ import { Icon } from '@iconify/vue'
 </script>
 
 <template>
-  <div class="dark:bg-gray-900 bg-white dark:text-white text-black">
+  <div
+    v-scroll-reveal="{ animationClass: 'animate-fade-in-up', threshold: 0.2 }"
+    class="dark:bg-gray-900 bg-white dark:text-white text-black"
+  >
     <div class="container p-4 mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
       <!-- Logo & Social Media -->
       <div>

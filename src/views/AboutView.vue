@@ -1,6 +1,9 @@
 <template>
   <div class="min-h-dvh dark:text-white">
-    <section class="w-full flex h-full flex-row pb-20 pt-20 justify-center items-center">
+    <section
+      v-scroll-reveal="{ animationClass: 'animate-fade-in-up', threshold: 0.2 }"
+      class="w-full flex h-full flex-row pb-20 pt-20 justify-center items-center"
+    >
       <div class="mx-auto container gap-8 w-full p-4">
         <h1 class="text-5xl font-bold mb-6">Tentang Kami</h1>
 

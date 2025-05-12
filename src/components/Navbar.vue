@@ -4,28 +4,33 @@ import { Icon } from '@iconify/vue'
 import Logo from '@/components/logo/Logo.vue'
 
 const currentTheme = ref(localStorage.getItem('theme') || 'light')
+const navMenu = ref(null)
 
-const body = document.querySelector('body')
+onMounted(() => {
+  console.log(navMenu.value)
+  document.body.setAttribute('class', localStorage.getItem('theme'))
+})
+
 // Function to toggle theme
 const onToggleTheme = () => {
   const newTheme = currentTheme.value === 'dark' ? 'light' : 'dark'
   currentTheme.value = newTheme
   localStorage.setItem('theme', newTheme)
-  body.setAttribute('class', newTheme)
-  console.log(newTheme)
+  document.body.setAttribute('class', newTheme)
 }
 
-onMounted(() => {
-  body.setAttribute('class', localStorage.getItem('theme'))
+const toggleNavMenu = () => {
+  console.log(navMenu.value)
+  navMenu.value.classList.toggle('flex')
+  navMenu.value.classList.toggle('hidden')
+}
+
+document.addEventListener('click', (e) => {
+  if (e.target !== navMenu.value && e.target !== document.getElementById('toggle-navMenu')) {
+    navMenu.value.classList.add('hidden')
+    navMenu.value.classList.remove('flex')
+  }
 })
-
-const toggleSlideBar = () => {
-  const slideBar = document.querySelector('ul')
-
-  slideBar.classList.toggle('hidden')
-  slideBar.classList.toggle('translate-x-full')
-  slideBar.classList.toggle('flex')
-}
 </script>
 
 <template>
@@ -38,7 +43,9 @@ const toggleSlideBar = () => {
       </router-link>
     </div>
     <ul
-      class="md:border-none bg-white/80 dark:bg-gray-900/80 md:dark:bg-transparent md:p-0 dark:text-white absolute md:flex md:static border-gray-500 md:border-transparent border z-50 md:z-0 md:bg-transparent top-20 right-0 rounded-2xl flex-col w-50 md:w-auto translate-x-full md:translate-none hidden p-4 md:flex-row gap-4 duration-300"
+      ref="navMenu"
+      id="navMenu"
+      class="md:border-none bg-white/80 dark:bg-gray-900/80 md:dark:bg-transparent md:p-0 dark:text-white absolute md:flex md:static border-gray-500 md:border-transparent border z-50 md:z-0 md:bg-transparent top-20 right-0 rounded-2xl flex-col w-50 md:w-auto md:translate-none hidden p-4 md:flex-row gap-4 duration-300"
     >
       <li class="w-full group">
         <router-link
@@ -89,8 +96,8 @@ const toggleSlideBar = () => {
         <span v-else><Icon icon="lucide:moon" class="size-6"></Icon></span>
       </div>
     </button>
-    <button @click="toggleSlideBar" class="cursor-pointer md:hidden">
-      <Icon class="size-6" icon="material-symbols:menu" />
+    <button @click="toggleNavMenu" class="cursor-pointer md:hidden">
+      <Icon class="size-6" id="toggle-navMenu" icon="material-symbols:menu" />
     </button>
   </nav>
 </template>
