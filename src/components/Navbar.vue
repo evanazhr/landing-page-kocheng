@@ -32,29 +32,51 @@ const toggleSlideBar = () => {
   <nav
     class="flex flex-row justify-between dark:text-white px-4 container mx-auto py-2.5 items-center border border-gray-500 rounded-2xl backdrop-blur-lg font-semibold md:w-full md:static transition-colors duration-500"
   >
-    <div class="size-8">
-      <Logo class="w-full h-full object-contain" />
+    <div>
+      <router-link to="/" class="size-8">
+        <Logo class="w-full h-full object-contain" />
+      </router-link>
     </div>
-    <div class="md:flex md:flex-grow md:justify-end">
-      <ul
-        class="md:border-none bg-white/50 dark:text-white backdrop-blur-md absolute md:flex md:static border-gray-500 border z-20 md:bg-transparent top-20 right-0 rounded-2xl flex-col w-50 translate-x-full md:translate-none hidden p-4 md:p-0 md:flex-row gap-4 duration-300"
-      >
-        <li class="w-full group">
-          <router-link
-            to="/"
-            class="dark:group-hover:text-white hover:border-gray-500 hover:border py-2 px-4 rounded-2xl block transition-colors duration-300"
-            >Home</router-link
-          >
-        </li>
-        <li class="w-full group">
-          <router-link
-            to="/about"
-            class="dark:group-hover:text-white rounded-2xl hover:border-gray-500 hover:border w-full py-2 block px-4 transition-colors duration-300"
-            >About</router-link
-          >
-        </li>
-      </ul>
-    </div>
+    <ul
+      class="md:border-none bg-white/80 dark:bg-gray-900/80 md:dark:bg-transparent md:p-0 dark:text-white absolute md:flex md:static border-gray-500 md:border-transparent border z-50 md:z-0 md:bg-transparent top-20 right-0 rounded-2xl flex-col w-50 md:w-auto translate-x-full md:translate-none hidden p-4 md:flex-row gap-4 duration-300"
+    >
+      <li class="w-full group">
+        <router-link
+          to="/"
+          class="dark:group-hover:text-white border border-transparent hover:border-gray-500 hover:border py-2 px-4 rounded-2xl block transition-colors duration-300"
+          >Home</router-link
+        >
+      </li>
+      <li class="w-full group">
+        <router-link
+          to="/about"
+          class="dark:group-hover:text-white border border-transparent rounded-2xl hover:border-gray-500 hover:border w-full py-2 block px-4 transition-colors duration-300"
+          >About</router-link
+        >
+      </li>
+      <li class="w-full group">
+        <router-link
+          to="/blog"
+          class="dark:group-hover:text-white rounded-2xl border border-transparent hover:border-gray-500 hover:border w-full py-2 block px-4 transition-colors duration-300"
+          >Blog</router-link
+        >
+      </li>
+      <li class="w-full group">
+        <router-link
+          to="/services"
+          class="dark:group-hover:text-white rounded-2xl border border-transparent hover:border-gray-500 hover:border w-full py-2 block px-4 transition-colors duration-300"
+          >Services</router-link
+        >
+      </li>
+      <li class="w-full group">
+        <router-link
+          to="/contact"
+          class="dark:group-hover:text-white rounded-2xl border border-transparent hover:border-gray-500 hover:border w-full py-2 block px-4 transition-colors duration-300"
+          >Contact</router-link
+        >
+      </li>
+    </ul>
+
     <!-- Button to toggle theme -->
     <button
       class="cursor-pointer justify-end md:justify-normal md:flex-grow-0 flex-grow px-4 py-2 rounded-lg transition-colors duration-300 flex items-center gap-2"

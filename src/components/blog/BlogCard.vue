@@ -2,9 +2,9 @@
 import { defineProps } from 'vue'
 
 const props = defineProps({
-  imgUrl: {
+  img: {
     type: String,
-    default: '/src/assets/img/cat-1.jpg',
+    default: 'no image',
   },
   title: {
     type: String,
@@ -27,9 +27,9 @@ const props = defineProps({
   >
     <div class="size-50 overflow-hidden rounded-2xl">
       <img
-        :src="imgUrl"
+        :src="img"
         class="size-full hover:scale-105 duration-300 object-cover bg-left"
-        alt=""
+        :alt="img"
       />
     </div>
     <div>

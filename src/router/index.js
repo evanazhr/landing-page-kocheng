@@ -2,6 +2,10 @@ import { createRouter, createWebHistory } from 'vue-router'
 import DefaultLayout from '@/layouts/DefaultLayout.vue'
 import HomeView from '@/views/HomeView.vue'
 import AboutView from '@/views/AboutView.vue'
+import ContactView from '@/views/ContactView.vue'
+import BlogView from '@/views/BlogView.vue'
+import ServiceView from '@/views/ServiceView.vue'
+
 import NoPageView from '@/views/NoPageView.vue'
 import EmptyPageView from '@/views/EmptyPageView.vue'
 
@@ -12,9 +16,9 @@ const routes = [
     children: [
       { path: '', component: HomeView },
       { path: 'about', component: AboutView },
-      { path: 'contact', component: EmptyPageView },
-      { path: 'services', component: EmptyPageView },
-      { path: 'blog', component: EmptyPageView },
+      { path: 'contact', component: ContactView },
+      { path: 'services', component: ServiceView },
+      { path: 'blog', component: BlogView },
     ],
   },
   {

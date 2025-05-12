@@ -6,7 +6,5 @@ import App from './App.vue'
 
 const app = createApp(App)
 
-console.log('router ', router)
-
 app.use(router)
 app.mount('#app')
